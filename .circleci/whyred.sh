@@ -11,7 +11,7 @@ KERNEL_DIR="$(pwd)"
 ##----------------------------------------------------------##
 # Device Name and Model
 MODEL=Xiaomi
-DEVICE=tulip
+DEVICE=whyred
 
 # Kernel Version Code
 #VERSION=
