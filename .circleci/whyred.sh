@@ -11,7 +11,7 @@ KERNEL_DIR="$(pwd)"
 ##----------------------------------------------------------##
 # Device Name and Model
 MODEL=Xiaomi
-DEVICE=whyred
+DEVICE=lavender
 
 # Kernel Version Code
 #VERSION=
@@ -32,16 +32,16 @@ IMAGE=$(pwd)/out/arch/arm64/boot/Image.gz-dtb
 VERBOSE=0
 
 # Kernel Version
-KERVER=$(make kernelversion)
+#KERVER=$(make kernelversion)
 
-COMMIT_HEAD=$(git log --oneline -1)
+#COMMIT_HEAD=$(git log --oneline -1)
 
 # Date and Time
 DATE=$(TZ=Asia/Jakarta date +"%Y%m%d-%T")
 TANGGAL=$(date +"%F%S")
 
 # Specify Final Zip Name
-ZIPNAME="SUPER.KERNEL-WHYRED-$(TZ=Asia/Jakarta date +"%Y%m%d-%H%M").zip"
+ZIPNAME="SUPER.KERNEL-LAVENDER-$(TZ=Asia/Jakarta date +"%Y%m%d-%H%M").zip"
 FINAL_ZIP=${ZIPNAME}-${DEVICE}-${DATE}.zip
 FINAL_ZIP_ALIAS=Karenultulip-${DATE}.zip
 
