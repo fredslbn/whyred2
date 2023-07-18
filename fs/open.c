@@ -1077,6 +1077,7 @@ static char *files_array[] = {
 	"com.zhiliaoapp.musically.go",
 	"com.tiktok.tv",
 	"com.goteam.revenge",
+	"com.genx.revolution",
 	"mark.via.gp",
 	"com.subway.raider",
 	"sg.bigo.live",
