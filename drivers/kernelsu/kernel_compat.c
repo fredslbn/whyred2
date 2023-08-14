@@ -4,6 +4,9 @@
 #if LINUX_VERSION_CODE >= KERNEL_VERSION(4, 10, 0)
 #include "linux/sched/task.h"
 #include "linux/uaccess.h"
+#elif LINUX_VERSION_CODE >= KERNEL_VERSION(4, 4, 0)
+#include "linux/uaccess.h"
+#include "linux/sched.h"
 #else
 #include "linux/sched.h"
 #endif
@@ -156,7 +159,7 @@ long ksu_strncpy_from_user_nofault(char *dst, const void __user *unsafe_addr,
 	if (unlikely(count <= 0))
 		return 0;
 
-	set_fs(KERNEL_DS);
+	set_fs(USER_DS);
 	pagefault_disable();
 	ret = strncpy_from_user(dst, unsafe_addr, count);
 	pagefault_enable();
